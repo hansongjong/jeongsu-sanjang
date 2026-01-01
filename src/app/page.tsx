@@ -6,6 +6,7 @@ import ReviewCard from "@/components/ReviewCard";
 import CrabSeasonBanner from "@/components/CrabSeasonBanner";
 import { menuItems, reviews } from "@/data/menu";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const signatureItems = menuItems.filter((item) => item.isSignature);
@@ -42,6 +43,40 @@ export default function Home() {
               >
                 전체 메뉴 보기
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Food Gallery */}
+        <section className="py-16 bg-gray-900">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                정수산장의 맛
+              </h2>
+              <p className="text-gray-400">
+                신선한 재료로 정성껏 준비합니다
+              </p>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/food-collage.png"
+                alt="정수산장 음식 사진 - 간장게장, 생선구이, 꽃게탕, 밑반찬"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="text-center mt-8">
+              <a
+                href="https://blog.naver.com/smarthb-homaesil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors"
+              >
+                📷 블로그에서 더 많은 사진 보기
+              </a>
             </div>
           </div>
         </section>

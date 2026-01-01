@@ -81,6 +81,14 @@ export default function Footer({ lang }: FooterProps) {
               <Link href={`${prefix}/visit`} className="text-amber-200 hover:text-white text-sm transition-colors">
                 {t.links.visit}
               </Link>
+              <a
+                href="https://blog.naver.com/smarthb-homaesil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-200 hover:text-white text-sm transition-colors flex items-center gap-1"
+              >
+                {lang === "ko" ? "📝 블로그 (사진/후기)" : "📝 Blog (Photos & Reviews)"}
+              </a>
             </div>
           </div>
         </div>
